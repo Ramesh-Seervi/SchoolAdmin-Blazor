@@ -1,0 +1,58 @@
+﻿@page "/fetchdata"
+
+
+
+<h1 style="text-align: center;">Register Page</h1>
+<div class="container-fluid">
+    <form>
+        <div class="mb-6">
+            <label for="exampleInputEmail1" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-6">
+            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-6">
+            <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+            <input type="text" class="form-control" id="exampleInputMobile" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-6">
+            <label for="exampleInputEmail1" class="form-label">DOB</label>
+            <input type="text" class="form-control" id="exampleInputMobile" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-6">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-6">
+            <label for="exampleInputPassword1" class="form-label">Conform Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+@code {
+    public string userName = "admin@gmail.com";
+    public string Password = "admin";
+    public bool rememberMe = true;
+
+
+    public void OnLogin(string name)
+    {
+        if (name == userName)
+        {
+            Console.WriteLine("Login Succesfully");
+        }
+        else
+        {
+            Console.WriteLine("Login Failed");
+        }
+    }
+
+
+}
+
+
+

@@ -1,0 +1,66 @@
+﻿@page "/teacher"
+@inject HttpClient Http
+
+<h1 style="text-align: center;">Teacher Details</h1>
+
+@if (todoItems == null)
+{
+    <p>No Todo Items found.</p>
+}
+else
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Subject</th>
+            <th>ContactNo</th>
+            <th>JoiningDate</th>
+            <th>Addresss</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in todoItems)
+        {
+            <tr>
+                <td>@item.TeacherID</td>
+                <td>@item.TeacherName</td>
+                <td>@item.TeacherDOB</td>
+                <td>@item.TeacherGender</td>
+                <td>@item.TeacherSubject</td>
+                <td>@item.TeacherContactNo</td>
+                <td>@item.TeacherJoiningDate</td>
+                <td>@item.Addresss</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+@code {
+    private const string ServiceEndpoint = "https://localhost:5001/api/Teacher";
+    private TodoItem[] todoItems;
+
+    protected override async Task OnInitializedAsync() => await GetTodoItems();
+
+    private async Task GetTodoItems() =>
+        todoItems = await Http.GetFromJsonAsync<TodoItem[]>(ServiceEndpoint);
+
+
+
+    private class TodoItem
+    {
+        public int TeacherID { get; set; }
+        public string TeacherName { get; set; }
+        public string TeacherDOB { get; set; }
+        public string TeacherGender { get; set; }
+        public string TeacherSubject { get; set; }
+        public string TeacherContactNo { get; set; }
+        public string TeacherJoiningDate { get; set; }
+        public string Addresss { get; set; }
+
+    }
+}

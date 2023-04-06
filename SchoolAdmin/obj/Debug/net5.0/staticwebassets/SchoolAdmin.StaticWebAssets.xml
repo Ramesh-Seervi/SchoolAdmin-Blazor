@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Imcrinox\Desktop\School Managament\SchoolAdmin\SchoolAdmin\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Imcrinox\Desktop\School Managament\SchoolAdmin\SchoolAdmin\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\Imcrinox\.nuget\packages\radzen.blazor\4.7.5\build\..\staticwebassets\" />
+</StaticWebAssets>

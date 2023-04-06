@@ -1,0 +1,2 @@
+# SchoolManagementProject-Blazor
+# SchoolAdmin-Blazor
